@@ -1,0 +1,259 @@
+/*
+# Kalei Themes
+
+To make sure the code demo's are un-affected by Kaleis own styles we only set a few global styles
+
+The menu is fixed and the page contained simply aligns itself 200px from the left.
+
+*/
+
+body {
+	background: #f0f0f0 !important;
+	margin: 0 !important;
+  padding: 0 !important;
+}
+
+.kalei-style-menu-container {
+	position: fixed;
+	background: #fff;
+	padding: 20px;
+	top: 20px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+
+}
+.kalei-style-menu {
+	width: 240px;
+}
+.kalei-style-page {
+	margin-left: 240px;
+	padding: 20px;
+}
+
+/*
+## Headings and paragraphs
+```
+<div class="kalei-comments">
+	<h1>Heading 1</h1>
+	<h2>Heading 2</h2>
+	<h3>Heading 3</h3>
+	<h4>Heading 4</h4>
+	<h5>Heading 5</h5>
+	<h6>Heading 6</h6>
+	<p class="fixie"></p>
+	<ul>
+	  <li>List Item 1</li>
+	  <li>List Item 2</li>
+	  <li>List Item 3</li>
+	</ul>
+</div>
+```
+*/
+
+.kalei-comments > h1,
+.kalei-comments > h2,
+.kalei-comments > h3,
+.kalei-comments > h4,
+.kalei-comments > h5,
+.kalei-comments > h5,
+.kalei-comments > h6,
+.kalei-comments > ul,
+.kalei-comments> ol,
+.kalei-comments> p a,
+.kalei-comments> p a:visited,
+.kalei-comments>  a:visited,
+.kalei-comments> a,
+.kalei-styleguide-menu-heading > h1,
+.kalei-styleguide-menu > h3,
+
+.kalei-comments > p {
+
+  font-family: 'Open Sans', sans-serif;
+	padding: 10px;
+	margin: 0;
+	color: #444;
+
+}
+.kalei-comments> p a,
+.kalei-comments> p a:visited {
+	padding: 0;
+}
+.kalei-comments > iframe {
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.kalei-comments > ul,
+.kalei-comments> ol {
+	margin-left: 20px;
+}
+.kalei-comments > ul,
+.kalei-comments> ol,
+.kalei-comments > p {
+	font-size: 12px;
+}
+
+/*
+## CSS and Comments Layout 
+
+These styles make sure the css code block is floated to the right correctly and the comments on the left
+
+```
+<div class="kalei-documentation">
+
+	<div class="kalei-comments-container ">
+		<div class="kalei-comments ">
+			<p>This is a test Kalei comment.</p>
+		</div>
+	</div>
+	<div class="kalei-css-container "><pre><code class="kalei-css">a { color: #323; }</code></pre></div>
+
+</div>
+```
+*/
+
+.kalei-style-page > .kalei-documentation {
+	position: relative;
+}
+.kalei-comments-container {
+	width: 60%;
+	position: relative;
+}
+.kalei-comments-container.kalei-no-css {
+	float: left;
+	width: 100%;
+}
+.kalei-css-container {
+	position: absolute;
+	width: 39%;
+	right: 0;
+	top: 0px;
+	bottom: 0px;
+	overflow: auto;
+}
+ .kalei-css-container > pre {
+ 	margin: 0;
+ }
+ .kalei-css-container > pre > .kalei-css  {
+
+	border-radius: 6px;
+	border: 1px solid #ebebeb;
+	
+	font-size: 11px;
+
+	white-space: pre-wrap; 
+}
+
+/*
+## Code demos
+
+When you use Markdown code blocks ```, Kalei automatically renders the code as HTML and beneath it shows the code block with syntax highlighting.
+```
+<pre>
+	<code>
+		.kalei-comments > pre > code, 
+		.kalei-css-container > pre > code {
+			font-size: 11px;
+			opacity: 0.7;
+			white-space: pre-wrap; 
+			padding: 10px;
+		}
+	</code>
+</pre>
+```
+*/
+.kalei-comments > pre > code, 
+.kalei-css-container > pre > code {
+	font-size: 11px;
+
+	white-space: pre-wrap; 
+	padding: 10px;
+}
+.kalei-css-container,
+.kalei-comments > pre > code {
+
+		opacity: 0.5;
+}
+.kalei-comments > pre > code:hover, 
+.kalei-css-container:hover  {
+	opacity: 1;
+}
+.kalei-css-container.kalei-no-css {
+	display: none;
+}
+.kalei-comments >  pre {
+	margin: 0;	
+	border-bottom: 1px solid #ebebeb;
+	border-left: 1px solid #ebebeb;
+	border-right: 1px solid #ebebeb;
+}
+.kalei-comments {
+
+padding: 20px;
+margin: 0 0 20px 0;
+background: 
+white;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+box-sizing: border-box;
+-webkit-box-shadow: 1px 1px 2px 
+rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+box-shadow: 1px 1px 2px 
+rgba(0, 0, 0, 0.1);
+}
+body .codedemo {
+	position: relative;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAAAXNSR0IArs4c6QAAAAZQTFRF+vr6////+o8bnQAAABBJREFUCB1jYPjPgBXhEAYAfr8P8bm+jEoAAAAASUVORK5CYII=);
+	padding: 20px;
+	border: 1px solid #ebebeb	;
+	font-size: 100%;
+}
+
+*:not(.codedemo) .kalei-styleguide-menu-heading h1 {
+	font-size: 18px;
+	margin: 0;
+	color: #444;
+}
+*:not(.codedemo) .kalei-styleguide-menu-heading, .styleguide-menu-heading:visited {
+	text-decoration: none;
+}
+
+*:not(.codedemo) .kalei-styleguide-menu-heading:hover {
+	color: #222;
+}
+
+*:not(.codedemo) .kalei-styleguide-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+}
+.kalei-styleguide-menu > h3 {
+		color: #444;
+	font-weight: bold;
+	margin-top: 20px;
+	font-size: 11px;
+
+}
+.kalei-styleguide-menu-link {
+	padding: 5px 0px 5px 20px;
+	display: block;
+	height: 100%;
+	text-decoration: none;
+	color: #555;
+	font-family: Arial;
+	font-size: 11px;
+}
+
+
+.kalei-styleguide-menu-link:hover,
+.kalei-styleguide-menu-link.active {
+	background: #f1f1f1a;
+	font-weight: bold;
+	color: #517c1a;
+}
+
