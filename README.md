@@ -11,10 +11,10 @@ This gem provides an easy way to add the Kalei Styleguide to your existing Ruby 
 **Step 2:** Add kalei to your `config/routes.rb`:
 
     Rails.application.routes.draw do
-			mount Kalei::Engine => "/style-guide"
-		end
+      mount Kalei::Engine => "/style-guide"
+    end
 
-**Step 3:** Kalei is now available in the browser at `/style-guide`
+Kalei will now be available in the browser at `/style-guide`. By default, it will parse your stylesheet at `/assets/application.css`. More configuration options coming soon.
 
 
 ## Non-Rails Installation
@@ -25,10 +25,10 @@ This gem provides an easy way to add the Kalei Styleguide to your existing Ruby 
 
 **Step 2:** Add kalei to your `config.ru`:
 
-		require 'kalei/app'
+    require 'kalei/app'
 
-		map '/style-guide' do
-			run Kalei::App
-		end
+    map '/style-guide' do
+      run Kalei::App
+    end
 
-**Step 3:** Kalei is now available in the browser at `/style-guide`
+Kalei will now be available in the browser at `/style-guide`. By default, it will parse your stylesheet at `/assets/application.css`, which may not be correct for your application. More configuration options coming soon.
