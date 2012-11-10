@@ -1,4 +1,4 @@
-require 'kalei/app'
+require 'kalei'
 
 module Kalei
   class Engine < ::Rails::Engine

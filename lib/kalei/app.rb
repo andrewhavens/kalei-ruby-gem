@@ -5,5 +5,8 @@ module Kalei
 		get '/' do
 			erb :index
 		end
+		get '/css/styles.css' do
+			erb :styles
+		end
 	end
 end

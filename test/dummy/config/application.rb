@@ -9,7 +9,7 @@ require "sprockets/railtie"
 require "rails/test_unit/railtie"
 
 Bundler.require
-require "kalei"
+require "kalei/engine"
 
 module Dummy
   class Application < Rails::Application
